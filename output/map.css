@@ -43,3 +43,12 @@
 @media(min-width:700px){.map-hero{padding:25px 26px}.map-hero h1{font-size:34px}.map-stats{max-width:520px}.map-route-panel{grid-template-columns:300px minmax(0,1fr)}.map-route-head{border-right:1px solid var(--line);padding:18px}.map-segments{grid-template-columns:1fr 1fr;padding:14px}.distance-note{grid-column:1/-1}.long-haul-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.map-stats{grid-template-columns:1fr 1fr}.map-stat:last-child{grid-column:1/-1}.map-hero h1{font-size:26px}#trip-map{height:390px}.segment{grid-template-columns:4px minmax(0,1fr)}.segment-side{grid-column:2;text-align:left;display:flex;gap:10px;align-items:center}.segment-side b{display:inline}}
 @media(prefers-reduced-motion:reduce){.map-day{transition:none}}
+
+.team-split{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.team-label{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.2px}
+.team-tyw{background:#f1eaf4;color:#744783;border:1px solid #dbc9e1}
+.team-cwc-label{background:#e7f3ee;color:#23654f;border:1px solid #bfddd1}
+.team-stop .card{position:relative;overflow:hidden}
+.team-stop.tyw .card{border-left:4px solid #8f5e9d}.team-stop.cwc .card{border-left:4px solid #2f7d68}
+.transport-tyw{border-top:4px solid #8f5e9d}.transport-cwc{border-top:4px solid #2f7d68}
+.map-day.team-cwc:not(.active){border-color:#9bc9b8;color:#23654f;background:#f1f8f5}
