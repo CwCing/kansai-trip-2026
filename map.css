@@ -1,0 +1,54 @@
+:root{--map-rail:#355e8d;--map-walk:#2f7d68;--map-taxi:#c7683c;--map-airport:#8f5e9d;--map-warn:#b84432}
+.map-overview{padding:24px 0 28px;border-bottom:3px solid #e4e8ef;scroll-margin-top:78px}
+.map-hero{position:relative;overflow:hidden;padding:20px;border-radius:18px;background:linear-gradient(135deg,#172035 0%,#263a5d 58%,#49647f 100%);color:#fff;box-shadow:0 16px 38px rgba(23,32,53,.18)}
+.map-hero:after{content:"";position:absolute;right:-46px;top:-72px;width:220px;height:220px;border:1px solid rgba(255,255,255,.15);border-radius:50%;box-shadow:0 0 0 32px rgba(255,255,255,.04),0 0 0 72px rgba(255,255,255,.025)}
+.map-kicker{position:relative;z-index:1;font-size:11px;font-weight:800;letter-spacing:1.5px;color:#f4b29e}
+.map-hero h1{position:relative;z-index:1;margin:8px 0 7px;font:700 28px/1.25 Georgia,"Songti SC",serif}
+.map-hero p{position:relative;z-index:1;max-width:620px;margin:0;color:#dce4ee;font-size:13px}
+.map-stats{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.map-stat{padding:10px 11px;border:1px solid rgba(255,255,255,.13);border-radius:11px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px)}
+.map-stat strong{display:block;font-size:18px;line-height:1.25}.map-stat span{display:block;color:#cbd6e3;font-size:10px;margin-top:2px}
+.map-shell{margin-top:14px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(23,32,53,.08);overflow:hidden}
+.map-toolbar{padding:12px;border-bottom:1px solid var(--line);background:#fbfcfe}
+.map-toolbar-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px}
+.map-toolbar-title strong{font-size:14px}.map-toolbar-title small{color:var(--muted);font-size:10px}
+.map-days{display:flex;gap:7px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:3px}
+.map-day{flex:0 0 auto;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:7px 10px;font:700 12px/1.2 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;cursor:pointer;transition:.2s ease}
+.map-day:hover{transform:translateY(-1px);border-color:#9eabba}.map-day.active{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 5px 14px rgba(215,82,57,.2)}
+#trip-map{height:430px;background:#e8edf3;z-index:1}
+.map-fallback{display:flex;align-items:center;justify-content:center;height:100%;padding:24px;text-align:center;color:var(--muted)}
+.map-route-panel{display:grid;gap:0;border-top:1px solid var(--line)}
+.map-route-head{padding:15px 14px 11px;background:#fff}
+.map-route-head-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.map-route-head h2{font:700 21px/1.35 Georgia,"Songti SC",serif;margin:2px 0 5px}.map-route-head p{margin:0;color:var(--muted);font-size:11px}
+.route-total{flex:0 0 auto;text-align:right;color:var(--accent)}.route-total strong{display:block;font-size:22px;line-height:1.1}.route-total span{font-size:10px;color:var(--muted)}
+.map-segments{display:grid;gap:8px;padding:0 12px 14px}
+.segment{display:grid;grid-template-columns:5px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 11px;border:1px solid #e8ebf0;border-radius:10px;background:#fbfcfd}
+.segment-line{width:5px;height:38px;border-radius:4px;background:var(--map-rail)}
+.segment[data-kind="walk"] .segment-line{background:var(--map-walk)}.segment[data-kind="taxi"] .segment-line{background:var(--map-taxi)}.segment[data-kind="airport"] .segment-line{background:var(--map-airport)}
+.segment-main strong{display:block;font-size:12px;line-height:1.35}.segment-main span{display:block;margin-top:3px;color:var(--muted);font-size:10px}
+.segment-side{text-align:right;white-space:nowrap}.segment-side b{display:block;font-size:13px}.segment-side a{font-size:10px}
+.distance-note{margin:0;padding:10px 13px;border-top:1px solid var(--line);background:#f7f8fa;color:var(--muted);font-size:10px}
+.distance-audit{margin-top:14px}.distance-audit h2{font:700 22px/1.35 Georgia,"Songti SC",serif;margin:0 0 10px}
+.long-haul-grid{display:grid;gap:9px}.long-haul{position:relative;overflow:hidden;padding:14px;border:1px solid #ead7d0;border-radius:12px;background:linear-gradient(135deg,#fff 0%,#fff8f5 100%)}
+.long-haul:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--accent)}
+.long-haul-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.long-haul-top b{font-size:14px}.long-haul-top strong{color:var(--accent);font-size:16px;white-space:nowrap}
+.long-haul p{margin:6px 0 0;color:#526078;font-size:11px}.long-haul .badge{display:inline-flex;margin-right:5px;padding:2px 7px;border-radius:999px;background:#172035;color:#fff;font-size:9px;vertical-align:1px}
+.distance-secondary{margin-top:10px;padding:12px 13px;border:1px dashed #cbd2dc;border-radius:11px;background:#fff;color:#4b596f;font-size:11px}.distance-secondary b{color:var(--ink)}
+.map-pin{display:flex;align-items:center;justify-content:center;width:27px;height:27px;border:2px solid #fff;border-radius:50%;background:#172035;color:#fff;font:800 11px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;box-shadow:0 4px 12px rgba(23,32,53,.35)}
+.map-pin.multi{background:var(--accent)}
+.map-popup h3{margin:0 0 4px;font-size:14px}.map-popup p{margin:0 0 7px;color:#647085;font-size:11px;line-height:1.5}.map-popup a{font-size:11px;font-weight:700}
+.leaflet-popup-content-wrapper{border-radius:12px;box-shadow:0 12px 30px rgba(23,32,53,.22)}.leaflet-popup-content{margin:12px 13px}
+.route-legend{display:flex;flex-wrap:wrap;gap:8px 12px;margin-top:9px;color:#dce4ee;font-size:10px}.route-legend span{display:inline-flex;align-items:center;gap:5px}.route-legend i{display:inline-block;width:17px;height:3px;border-radius:3px}
+@media(min-width:700px){.map-hero{padding:25px 26px}.map-hero h1{font-size:34px}.map-stats{max-width:520px}.map-route-panel{grid-template-columns:300px minmax(0,1fr)}.map-route-head{border-right:1px solid var(--line);padding:18px}.map-segments{grid-template-columns:1fr 1fr;padding:14px}.distance-note{grid-column:1/-1}.long-haul-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.map-stats{grid-template-columns:1fr 1fr}.map-stat:last-child{grid-column:1/-1}.map-hero h1{font-size:26px}#trip-map{height:390px}.segment{grid-template-columns:4px minmax(0,1fr)}.segment-side{grid-column:2;text-align:left;display:flex;gap:10px;align-items:center}.segment-side b{display:inline}}
+@media(prefers-reduced-motion:reduce){.map-day{transition:none}}
+
+.team-split{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.team-label{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.2px}
+.team-tyw{background:#f1eaf4;color:#744783;border:1px solid #dbc9e1}
+.team-cwc-label{background:#e7f3ee;color:#23654f;border:1px solid #bfddd1}
+.team-stop .card{position:relative;overflow:hidden}
+.team-stop.tyw .card{border-left:4px solid #8f5e9d}.team-stop.cwc .card{border-left:4px solid #2f7d68}
+.transport-tyw{border-top:4px solid #8f5e9d}.transport-cwc{border-top:4px solid #2f7d68}
+.map-day.team-cwc:not(.active){border-color:#9bc9b8;color:#23654f;background:#f1f8f5}
