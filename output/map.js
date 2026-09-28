@@ -105,7 +105,7 @@
     if(!window.L){mapEl.innerHTML='<div class="map-fallback">地图组件未加载。请联网后刷新；下方每一段仍可通过 Google Maps 查看。</div>';return;}
     mapEl.innerHTML='';
     map=L.map('trip-map',{zoomControl:true,scrollWheelZoom:false,attributionControl:true}).setView([34.82,135.5],9);
-    L.tileLayer('./tiles/{z}/{x}/{y}.png',{minNativeZoom:8,maxNativeZoom:8,minZoom:8,maxZoom:14,noWrap:true,attribution:'© OpenStreetMap contributors'}).addTo(map);
+    L.tileLayer('./tiles/{z}/{x}/{y}.png',{minNativeZoom:8,maxNativeZoom:12,minZoom:8,maxZoom:12,noWrap:true,attribution:'© OpenStreetMap contributors'}).addTo(map);
     document.querySelectorAll('.map-day').forEach(function(b){b.addEventListener('click',function(){const v=this.getAttribute('data-map-day');if(v==='all'){renderAll();}else{renderDay(Number(v));}});});
     renderAll();setTimeout(function(){map.invalidateSize();},150);
   }
