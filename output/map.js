@@ -9,7 +9,14 @@
     daisenin:{n:'大仙院',j:'大徳寺 大仙院',lat:35.044516,lng:135.7458129},
     kyocera:{n:'京都市京瓷美术馆',j:'京都市京セラ美術館',lat:35.013564,lng:135.783293},
     tenryuji:{n:'天龙寺・篩月',j:'天龍寺・篩月',lat:35.0157032,lng:135.6745031},
+    jrSagaArashiyama:{n:'JR 嵯峨岚山站',j:'JR 嵯峨嵐山駅',lat:35.01916,lng:135.68118},
+    otagi:{n:'爱宕念佛寺',j:'愛宕念仏寺',lat:35.02796,lng:135.66309},
+    toriimoto:{n:'嵯峨鸟居本',j:'嵯峨鳥居本伝統的建造物群保存地区',lat:35.02544,lng:135.66612},
+    gioji:{n:'祇王寺',j:'祇王寺',lat:35.02247,lng:135.66874},
+    jojakkoji:{n:'常寂光寺',j:'常寂光寺',lat:35.01975,lng:135.66953},
+    mikami:{n:'御发神社',j:'御髪神社',lat:35.01777,lng:135.67058},
     bamboo:{n:'岚山竹林小径',j:'嵐山 竹林の小径',lat:35.0167419,lng:135.6711482},
+    kijuro:{n:'岚山喜重郎',j:'嵐山 喜重郎',lat:35.01518,lng:135.67577},
     togetsu:{n:'渡月桥',j:'渡月橋',lat:35.0136547,lng:135.6778518},
     hankyuArashiyama:{n:'阪急岚山站',j:'阪急嵐山駅',lat:35.0095414,lng:135.680788},
     kyotoBal:{n:'京都 BAL',j:'京都 BAL',lat:35.0067899,lng:135.7695794},
@@ -45,8 +52,8 @@
       s(P.kixT1,P.kixStation,'walk','步行','10–15 分钟','T1 连通桥到铁路站'),s(P.kixStation,P.kyotoStation,'rail','JR HARUKA','80–90 分钟','跨城直达，优先推荐'),s(P.kyotoStation,P.kyotoHotel,'rail','地铁＋步行','20–30 分钟','大箱多可改两辆出租车')]},
     {date:'10.03',week:'周六',label:'10.03',title:'京都北区 → 冈崎',color:'#c7683c',panel:1,points:[P.kyotoHotel,P.kinkakuji,P.daisenin,P.kyocera,P.kyotoHotel],segments:[
       s(P.kyotoHotel,P.kinkakuji,'rail','地铁＋巴士','35–45 分钟','4 人想省力可直接打车'),s(P.kinkakuji,P.daisenin,'rail','巴士＋步行','12–20 分钟','当天最短公共交通段'),s(P.daisenin,P.kyocera,'taxi','出租车','20–30 分钟','公交约 47 分钟，明确建议打车'),s(P.kyocera,P.kyotoHotel,'rail','步行＋地铁','25–35 分钟','东山站乘东西线')]},
-    {date:'10.04',week:'周日',label:'10.04',title:'岚山整日 → 京都 BAL',color:'#2f7d68',panel:2,points:[P.kyotoHotel,P.tenryuji,P.bamboo,P.togetsu,P.hankyuArashiyama,P.kyotoBal,P.kyotoHotel],segments:[
-      s(P.kyotoHotel,P.tenryuji,'rail','地铁＋岚电','40–50 分钟','避开拥堵市巴士'),s(P.tenryuji,P.bamboo,'walk','步行','10–15 分钟','天龙寺北侧进入'),s(P.bamboo,P.togetsu,'walk','步行','20–30 分钟','沿岚山主街回桂川'),s(P.togetsu,P.hankyuArashiyama,'walk','步行','10–15 分钟','过桥到阪急站'),s(P.hankyuArashiyama,P.kyotoBal,'rail','阪急＋步行','35–45 分钟','桂站换乘到京都河原町'),s(P.kyotoBal,P.kyotoHotel,'taxi','步行／出租车','7–25 分钟','购物袋多时短程打车')]},
+    {date:'10.04',week:'周日',label:'10.04',title:'奥嵯峨下坡线 → 京都 BAL',color:'#2f7d68',panel:2,points:[P.kyotoHotel,P.jrSagaArashiyama,P.otagi,P.toriimoto,P.gioji,P.jojakkoji,P.mikami,P.bamboo,P.kijuro,P.togetsu,P.hankyuArashiyama,P.kyotoBal,P.kyotoHotel],segments:[
+      s(P.kyotoHotel,P.jrSagaArashiyama,'rail','地铁＋JR','40–50 分钟','乌丸御池经二条换 JR 嵯峨野线'),s(P.jrSagaArashiyama,P.otagi,'taxi','出租车优先','10–15 分钟','4 人合乘上山，避免等候低频巴士'),s(P.otagi,P.toriimoto,'walk','下坡步行','8–12 分钟','从奥嵯峨最高点开始向南'),s(P.toriimoto,P.gioji,'walk','步行','18–25 分钟','沿历史街区下行'),s(P.gioji,P.jojakkoji,'walk','步行','10–15 分钟','祇王寺无游客厕所'),s(P.jojakkoji,P.mikami,'walk','步行','10–15 分钟','常寂光寺内部另有台阶'),s(P.mikami,P.bamboo,'walk','步行','3–8 分钟','路过小火车站但不乘车'),s(P.bamboo,P.kijuro,'walk','步行','12–18 分钟','竹林只走核心短段'),s(P.kijuro,P.togetsu,'walk','步行','8–12 分钟','午餐后前往桂川'),s(P.togetsu,P.hankyuArashiyama,'walk','步行','10–15 分钟','过桥到阪急岚山站'),s(P.hankyuArashiyama,P.kyotoBal,'rail','阪急＋步行','35–45 分钟','桂站换乘到京都河原町'),s(P.kyotoBal,P.kyotoHotel,'taxi','步行／出租车','7–25 分钟','购物袋多时短程打车')]},
     {date:'10.05',week:'周一',label:'10.05',title:'京都南区＋东区 → 大阪',color:'#355e8d',panel:3,points:[P.kyotoHotel,P.fushimi,P.ginkakuji,P.philosopher,P.nanzenji,P.heian,P.kyotoHotel,P.kyotoStation,P.osakaHotel],segments:[
       s(P.kyotoHotel,P.fushimi,'rail','地铁＋JR','35–45 分钟','京都站换奈良线'),s(P.fushimi,P.ginkakuji,'taxi','出租车优先','30–40 分钟','跨京都南北；公交约 47–60 分钟'),s(P.ginkakuji,P.philosopher,'walk','步行','10–15 分钟','进入哲学之道北段'),s(P.philosopher,P.nanzenji,'walk','观景步行','35–45 分钟','当天主要步行段'),s(P.nanzenji,P.heian,'walk','步行','16–20 分钟','短程顺路'),s(P.heian,P.kyotoHotel,'rail','步行＋地铁','30–40 分钟','东山站回乌丸御池'),s(P.kyotoHotel,P.kyotoStation,'rail','地铁／出租车','15–25 分钟','取行李后前往京都站'),s(P.kyotoStation,P.osakaHotel,'rail','JR 新快速＋地铁','80–100 分钟','晚间换城，预留站内步行')]},
     {date:'10.06',week:'周二',label:'10.06',title:'大阪城 → 梅田购物',color:'#b7791f',panel:4,points:[P.osakaHotel,P.osakaCastle,P.lucua,P.grandFront,P.kindal,P.hep,P.osakaHotel],segments:[
